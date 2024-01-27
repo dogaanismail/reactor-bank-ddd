@@ -1,2 +1,23 @@
+pluginManagement {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            library('guava','com.google.guava:guava:33.0.0-jre')
+            library('projectreactor-blockhound', 'io.projectreactor.tools:blockhound:1.0.8.RELEASE')
+            library('apache-commons-lang3', 'org.apache.commons:commons-lang3:3.14.0')
+            library('assertj-core', 'org.assertj:assertj-core:3.25.2')
+        }
+    }
+}
+
+
 rootProject.name = 'reactor-bank-ddd'
+include 'shared-dependencies'
 
