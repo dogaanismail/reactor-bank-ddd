@@ -1,0 +1,5 @@
+description = 'common API'
+
+dependencies {
+    api project(':shared-dependencies')
+}

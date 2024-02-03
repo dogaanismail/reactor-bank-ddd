@@ -3,8 +3,8 @@ apply plugin: 'io.spring.dependency-management'
 description 'shared dependencies'
 
 dependencies {
-    api group: 'io.projectreactor', name: 'reactor-core'
-    api 'org.springframework:spring-context'
-    api 'org.springframework:spring-webflux'
-    api 'org.springframework:spring-core'
+    compileOnly group: 'io.projectreactor', name: 'reactor-core'
+    compileOnly 'org.springframework:spring-context'
+    compileOnly 'org.springframework:spring-webflux'
+    compileOnly 'org.springframework:spring-core'
 }

@@ -24,34 +24,34 @@ subprojects {
     version = '0.0.1-SNAPSHOT'
     targetCompatibility = JavaVersion.VERSION_21
     sourceCompatibility = JavaVersion.VERSION_21
-}
 
-dependencyManagement {
-    imports {
-        mavenBom SpringBootPlugin.BOM_COORDINATES
+    dependencyManagement {
+        imports {
+            mavenBom SpringBootPlugin.BOM_COORDINATES
+        }
     }
-}
 
-dependencies {
-    implementation libs.guava
-    implementation libs.projectreactor.blockhound
-    implementation libs.apache.commons.lang3
+    dependencies {
+        implementation libs.guava
+        implementation libs.projectreactor.blockhound
+        implementation libs.apache.commons.lang3
 
-    annotationProcessor "org.immutables:value:${immutablesVersion}"
+        annotationProcessor "org.immutables:value:${immutablesVersion}"
 
-    implementation "org.immutables:value:${immutablesVersion}"
-    implementation "com.fasterxml.jackson.core:jackson-core"
-    implementation "com.fasterxml.jackson.core:jackson-databind"
-    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8"
-    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+        implementation "org.immutables:value:${immutablesVersion}"
+        implementation "com.fasterxml.jackson.core:jackson-core"
+        implementation "com.fasterxml.jackson.core:jackson-databind"
+        implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8"
+        implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
 
-    testImplementation libs.assertj.core
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine'
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
-}
+        testImplementation libs.assertj.core
+        testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine'
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+    }
 
-test {
-    useJUnitPlatform {
-        includeEngines 'junit-jupiter'
+    test {
+        useJUnitPlatform {
+            includeEngines 'junit-jupiter'
+        }
     }
 }
