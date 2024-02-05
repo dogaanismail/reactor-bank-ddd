@@ -3,7 +3,7 @@ apply plugin: 'io.spring.dependency-management'
 description 'shared dependencies'
 
 dependencies {
-    compileOnly group: 'io.projectreactor', name: 'reactor-core'
+    compileOnly group: 'io.projectreactor', name: 'reactor-core', version: '3.6.2'
     compileOnly 'org.springframework:spring-context'
     compileOnly 'org.springframework:spring-webflux'
     compileOnly 'org.springframework:spring-core'

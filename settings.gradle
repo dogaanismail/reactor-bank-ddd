@@ -18,6 +18,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = 'reactor-bank-ddd'
-include 'shared-dependencies'
 include 'common-api'
+include 'shared-dependencies'
+include 'common-persistence-api'
 
